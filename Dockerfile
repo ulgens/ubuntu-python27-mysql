@@ -16,4 +16,5 @@ RUN service mysql start
 
 # Install PhantomJS
 RUN apt-get install wget git -y
-RUN chmod +x install_phantomjs.sh && ./install_phantomjs.sh
+ADD install_phantomjs.sh /install_phantomjs.sh
+RUN chmod +x /install_phantomjs.sh && ./install_phantomjs.sh
