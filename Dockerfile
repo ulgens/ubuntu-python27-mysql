@@ -19,6 +19,12 @@ RUN apt-get update && apt-get install \
     # Clean
     apt-get autoclean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN wget -c https://github.com/git-lfs/git-lfs/releases/download/v1.5.5/git-lfs-linux-amd64-1.5.5.tar.gz
+RUN tar -xzf git-lfs-linux-amd64-1.5.5.tar.gz
+RUN cd git-lfs-1.5.5/
+RUN ./install.sh
+RUN cd ..
+
 RUN pip install virtualenv
 
 # Install PhantomJS
