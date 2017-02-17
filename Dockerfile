@@ -13,7 +13,9 @@ RUN apt-get update && apt-get install \
         python-pip python-dev \
         # Mysql
         libmysqlclient-dev mysql-server \
-        # Phantom.js
+        # Rabbitmq
+        rabbitmq-server \
+        # Phantom.js # Will be deleted soon
         build-essential chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev \
         libfontconfig1 libfontconfig1-dev wget git -y && \
     # Clean
